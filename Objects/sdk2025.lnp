@@ -1,0 +1,15 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\gpio.o"
+".\objects\timers.o"
+".\objects\garra.o"
+".\objects\i2c.o"
+".\objects\usart.o"
+".\objects\systickdelay.o"
+".\objects\delay.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\sdk2025.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\sdk2025.map" -o .\Objects\sdk2025.axf
