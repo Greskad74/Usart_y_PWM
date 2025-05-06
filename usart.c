@@ -101,7 +101,7 @@ void USART3_txrx(){
 	GPIOB->CRH |= ( (1 <<11)|(1 << 9) | (1<<8)); // TX A 50 Mhz
 	
 	// Setup the baude rate for 9600 bps
-	USART3->BRR = 7500; // 0x341 = 9600 bps
+	USART3->BRR = 0xEA6; // 0x341 = 9600 bps
 	USART3->CR1 |= 8;
 	USART3->CR1 |= 4;
 	USART3->CR1 |= 0x2000;
